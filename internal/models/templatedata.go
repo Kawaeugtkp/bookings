@@ -7,7 +7,7 @@ type TemplateData struct {
 	FloatMap map[string]float32
 	Data map[string]interface{} // interfaceはタイプがはっきりしないものとして
 	// 使えるみたいなことを言っています
-	CSRToken string
+	CSRFToken string
 	Flash string
 	Warning string
 	Error string
