@@ -5,27 +5,53 @@
 
         <div class="row">
             <div class="col">
+                {{$res := index .Data "reservation"}} <!-- ここの.Dataとか
+                    下の.Form.Errors.Getの.Formとかどっから来てんのか
+                    はっきりせんやんけと思うけど、おそらくhandlerでReservationで
+                    持ってきている時に使っている&models.TemplateDataのことを
+                    指しているという認識で通るような気がする-->
                 <h1>Make a reservation</h1>
-                <b>Reservation Details</b>
-                <form action="" method="post" class="needs-validation" novalidate>
+                <p><strong>Reservation Details</strong><br>
+                    Room: {{$res.Room.RoomName}}<br>
+                    Arrival: {{index .StringMap "start_date"}}<br>
+                    Departure: {{index .StringMap "end_date"}}
+                </p>
+
+                <form action="/make-reservation" method="post" class="" novalidate>
+                    <input type="hidden" name="csrf_token" value="{{.CSRFToken}}">
+                    <input type="hidden" name="start_date" value="{{index .StringMap "start_date"}}">
+                    <input type="hidden" name="end_date" value="{{index .StringMap "end_date"}}">
+                    <input type="hidden" name="room_id" value="{{$res.RoomID}}">
                     <div class="form-group mt-3">
                         <label for="first_name">First name</label>
-                        <input type="text" name="first_name" id="first_name" class="form-control" required autocomplete="off">
+                        {{with .Form.Errors.Get "first_name"}}
+                            <label for="" class="text-danger">{{.}}</label>
+                        {{end}}
+                        <input type="text" name="first_name" id="first_name" class="form-control {{with .Form.Errors.Get "first_name"}} is-invalid {{end}}" required autocomplete="off" value="{{$res.FirstName}}">
                     </div>
 
                     <div class="form-group">
                         <label for="last_name">Last name</label>
-                        <input type="text" name="last_name" id="last_name" class="form-control" required autocomplete="off">
+                        {{with .Form.Errors.Get "last_name"}}
+                            <label for="" class="text-danger">{{.}}</label>
+                        {{end}}
+                        <input type="text" name="last_name" id="last_name" class="form-control {{with .Form.Errors.Get "last_name"}} is-invalid {{end}}" required autocomplete="off" value="{{$res.LastName}}">
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" class="form-control" required autocomplete="off">
+                        {{with .Form.Errors.Get "email"}}
+                            <label for="" class="text-danger">{{.}}</label>
+                        {{end}}
+                        <input type="email" name="email" id="email" class="form-control {{with .Form.Errors.Get "email"}} is-invalid {{end}}" required autocomplete="off" value="{{$res.Email}}">
                     </div>
 
                     <div class="form-group">
                         <label for="phone">Phone number</label>
-                        <input type="text" name="phone" id="phone" class="form-control" required autocomplete="off">
+                        {{with .Form.Errors.Get "phone"}}
+                            <label for="" class="text-danger">{{.}}</label>
+                        {{end}}
+                        <input type="text" name="phone" id="phone" class="form-control {{with .Form.Errors.Get "phone"}} is-invalid {{end}}" required autocomplete="off" value="{{$res.Phone}}">
                     </div>
 
                     <br>

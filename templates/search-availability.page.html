@@ -17,10 +17,10 @@
             <div class="col">
               <div class="row g-3" id="reservation-dates">
                 <div class="col">
-                 <input required class="form-control" type="text" name="start" placeholder="Arrival date">
+                 <input required autocomplete="off" class="form-control" type="text" name="start" placeholder="Arrival date">
                 </div>
                 <div class="col">
-                  <input required class="form-control" type="text" name="end" placeholder="Departure">  
+                  <input required autocomplete="off" class="form-control" type="text" name="end" placeholder="Departure">  
                 </div> 
               </div>
             </div>
@@ -37,6 +37,7 @@
         const elem = document.getElementById('reservation-dates');
         const rangepicker = new DateRangePicker(elem, {
         format: "yyyy-mm-dd",
+        minDate: new Date(),
         }); 
     </script>
 {{end}}

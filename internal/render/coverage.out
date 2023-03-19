@@ -1,0 +1,25 @@
+mode: set
+github.com/Kawaeugtkp/bookings/internal/render/render.go:25.40,27.2 1 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:29.84,35.2 5 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:38.105,41.19 2 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:41.19,44.3 1 0
+github.com/Kawaeugtkp/bookings/internal/render/render.go:44.8,46.3 1 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:49.2,50.9 2 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:50.9,52.3 1 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:54.2,60.16 4 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:60.16,62.3 1 0
+github.com/Kawaeugtkp/bookings/internal/render/render.go:65.2,66.16 2 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:66.16,69.3 2 0
+github.com/Kawaeugtkp/bookings/internal/render/render.go:71.2,71.12 1 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:74.67,80.16 3 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:80.16,82.3 1 0
+github.com/Kawaeugtkp/bookings/internal/render/render.go:85.2,85.29 1 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:85.29,88.17 3 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:88.17,90.4 1 0
+github.com/Kawaeugtkp/bookings/internal/render/render.go:92.3,93.17 2 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:93.17,95.4 1 0
+github.com/Kawaeugtkp/bookings/internal/render/render.go:97.3,97.23 1 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:97.23,99.18 2 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:99.18,101.5 1 0
+github.com/Kawaeugtkp/bookings/internal/render/render.go:104.3,104.21 1 1
+github.com/Kawaeugtkp/bookings/internal/render/render.go:107.2,107.21 1 1
